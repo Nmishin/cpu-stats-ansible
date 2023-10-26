@@ -1,0 +1,14 @@
+[Unit]
+Description=cpu-stats service
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+User=nmishin
+Group=nmishin
+Type=simple
+Restart=on-failure
+ExecStart=/opt/nmishin/cpu-stats/cpu-stats
+
+[Install]
+WantedBy=multi-user.target

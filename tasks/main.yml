@@ -1,0 +1,23 @@
+- name: Create directories if they do not exist
+  ansible.builtin.file:
+    path: "{{ base_path }}"
+    state: directory
+    mode: '0755'
+
+- name: Copy systemd service file to server
+  copy:
+    src: cpu-stats.service
+    dest: /etc/systemd/system
+
+- name: Download app
+  ansible.builtin.get_url:
+    url: "https://github.com/Nmishin/cpu-stats/releases/download/{{ app_version }}/cpu-stats_{{ app_version }}_Linux_x86_64.tar.gz"
+    dest: "{{ base_path }}"
+    mode: '0755'
+
+- name: Untar archive
+  ansible.builtin.shell: |
+    cd {{ base_path }}
+    tar xzf cpu-stats_* ; rm cpu-stats_*
+  notify:
+    - Start cpu-stats

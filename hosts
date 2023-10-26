@@ -1,0 +1,2 @@
+[myservers]
+myservers ansible_host=192.168.40.8 ansible_connection=ssh

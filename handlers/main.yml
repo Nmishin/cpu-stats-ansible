@@ -1,0 +1,6 @@
+---
+- name: Start cpu-stats
+  systemd:
+    name: cpu-stats
+    state: started
+    enabled: yes
