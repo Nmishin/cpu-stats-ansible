@@ -1,6 +1,6 @@
 Ansible Role: cpu-stats
 =========
-[![CI](https://github.com/nmishin/cpu-stats-ansible/workflows/ci.yml/badge.svg?event=push)](https://github.com/nmishin/cpu-stats-ansible/actions?query=workflow%3ACI)
+[![CI](https://github.com/Nmishin/cpu-stats-ansible/actions/workflows/ci.yml/badge.svg)](https://github.com/Nmishin/cpu-stats-ansible/actions/workflows/ci.yml)
 
 An Ansible Role that installs [cpu-stats](https://github.com/Nmishin/cpu-stats) on Linux.
 
