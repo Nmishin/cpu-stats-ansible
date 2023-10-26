@@ -12,8 +12,10 @@ Role Variables
 --------------
 Available variables are listed below, along with default values (see defaults/main.yml):
 
-    app_version: 'version of cpu-stats app'
+    app_version: '0.9.0'
     base_path: '/opt/nmishin/cpu-stats'
+
+Version of app can be found in the app repo: https://github.com/Nmishin/cpu-stats
 
 Dependencies
 ------------
@@ -26,7 +28,7 @@ Example Playbook
       become: yes
       become_user: root
       roles:
-        - cpu-stats
+        - cpu-stats-ansible
 
 License
 -------
