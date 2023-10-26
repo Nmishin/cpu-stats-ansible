@@ -1,6 +1,0 @@
----
-- hosts: myservers
-  become: yes
-  become_user: root
-  roles:
-    - cpu-stats

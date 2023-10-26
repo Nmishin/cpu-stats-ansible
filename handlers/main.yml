@@ -3,4 +3,4 @@
   systemd:
     name: cpu-stats
     state: started
-    enabled: yes
+    enabled: true

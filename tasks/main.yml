@@ -1,3 +1,4 @@
+---
 - name: Create directories if they do not exist
   ansible.builtin.file:
     path: "{{ base_path }}"
@@ -11,7 +12,8 @@
 
 - name: Download app
   ansible.builtin.get_url:
-    url: "https://github.com/Nmishin/cpu-stats/releases/download/{{ app_version }}/cpu-stats_{{ app_version }}_Linux_x86_64.tar.gz"
+    url: "https://github.com/Nmishin/cpu-stats/releases/download/\
+         {{ app_version }}/cpu-stats_{{ app_version }}_Linux_x86_64.tar.gz"
     dest: "{{ base_path }}"
     mode: '0755'
 
