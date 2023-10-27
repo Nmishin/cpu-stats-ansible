@@ -17,6 +17,8 @@ Available variables are listed below, along with default values (see defaults/ma
 
 Version of app can be found in the app repo: https://github.com/Nmishin/cpu-stats
 
+You can choose any base_path, but according to FHS, we need to install packages to the /opt/'provider'/'package'
+
 Dependencies
 ------------
 None.
